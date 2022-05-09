@@ -286,12 +286,11 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-# Alarms specific
-Generated Files/
-!src/TimeUnitTests_VSTest/WindowsDev_TemporaryKey.pfx
-!src/TimeUniversal/WindowsDev_TemporaryKey.pfx
-/loc/packages/
-WorkspaceInfo.xml
+# Project specific
+src/GradeBook/bin/
+src/GradeBook/obj/
+src/GradeBook/.vs/
+
 
 # Localized strings
 # LCT files are loc system artifacts that we don't want in our repo.
