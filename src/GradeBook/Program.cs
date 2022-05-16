@@ -6,5 +6,8 @@ if(args.Length > 0 )
 }
 else
 {
-    Console.WriteLine("Hello");
+    double x = 34.1;
+    var y = 10.3;
+
+    Console.WriteLine($"The result or {x} plus {y} is: {x + y}");
 }
