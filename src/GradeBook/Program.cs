@@ -6,8 +6,10 @@ if(args.Length > 0 )
 }
 else
 {
-    double x = 34.1;
-    var y = 10.3;
+    var numbers = new double[3];
+    numbers[0] = 12.7;
+    numbers[1] = 11.9;
+    numbers[2] = 9;
 
-    Console.WriteLine($"The result or {x} plus {y} is: {x + y}");
+    Console.WriteLine($"The{numbers[2]} sum is: {numbers[2] + numbers[1] + numbers[0]}");
 }
