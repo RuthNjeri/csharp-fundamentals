@@ -6,10 +6,19 @@ if(args.Length > 0 )
 }
 else
 {
-    var numbers = new double[3];
-    numbers[0] = 12.7;
-    numbers[1] = 11.9;
-    numbers[2] = 9;
+    var numbers = new[] { 12.7, 10.3, 6.11, 4.1 };
+    var result = 0.0;
 
-    Console.WriteLine($"The{numbers[2]} sum is: {numbers[2] + numbers[1] + numbers[0]}");
+    //List<double> grades = new List<double>();
+    var grades = new List<double>() { 12.7, 10.3, 6.11, 4.1 };
+    grades.Add(56.1);
+
+    foreach(double number in grades)//numbers
+    {
+        result += number;
+    }
+    var average = result / grades.Count;
+
+    Console.WriteLine($"The sum is: {result}");
+    Console.WriteLine($"The average is: {average}");
 }
