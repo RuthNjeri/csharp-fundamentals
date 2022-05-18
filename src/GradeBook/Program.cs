@@ -20,5 +20,5 @@ else
     var average = result / grades.Count;
 
     Console.WriteLine($"The sum is: {result}");
-    Console.WriteLine($"The average is: {average}");
+    Console.WriteLine($"The average is: {average:N1}");
 }
