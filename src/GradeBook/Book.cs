@@ -25,4 +25,6 @@
 /* Access modifiers; public(code outside of the class can have access to it)
  * In OOP, you are protective of your state. You don't want to allow direct access to modifying stored values
  * Private: Field available only in the class 
+ * The opposite of static is an instance member, be conservative when using static keyword. It negates OOP
+ * Using static for a method and an instance field within it is not possible
 */
