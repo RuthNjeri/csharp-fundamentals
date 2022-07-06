@@ -6,7 +6,7 @@
         {
             grades = new List<double>();
 			// this(object)
-            this.name = name;
+            this.name = name; // TODO review the video on the this keyword
         }
 
         // Instance member/ Instance method
@@ -15,10 +15,38 @@
 			grades.Add(grade);
 		}
 
+		public void ShowStatistics()
+        {
+            var result = 0.0;
+            var highGrade = double.MinValue;
+            var lowGrade = double.MaxValue;
+            foreach (double number in grades)//numbers
+            {
+                highGrade = Math.Max(highGrade, number);
+                lowGrade = Math.Min(lowGrade, number);
+
+                //if (number > highGrade)
+                //{
+                //    highGrade = number;
+                //}
+                //if (number < lowGrade)
+                //{
+                //    lowGrade = number;
+                //}
+                result += number;
+            }
+            var average = result / grades.Count;
+
+            Console.WriteLine($"The sum is: {result}");
+            Console.WriteLine($"The average is: {average:N1}");
+            Console.WriteLine($"The highest grade is: {highGrade:N1}");
+            Console.WriteLine($"The lowest grade is: {lowGrade:N1}");
+        }
+
 		// A field accessible throughout the methods in the class
 		// A field is declared in a class or struct. A data member of a class
-		List<double> grades;
-		private string name;
+		private List<double> grades;
+		private readonly string name; // TODO investigate read only
 	}
 }
 
