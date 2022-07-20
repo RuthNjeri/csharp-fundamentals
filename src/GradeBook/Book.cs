@@ -15,15 +15,16 @@
 			grades.Add(grade);
 		}
 
-		public void ShowStatistics()
+		public Statistics GetStatistics()
         {
-            var result = 0.0;
-            var highGrade = double.MinValue;
-            var lowGrade = double.MaxValue;
-            foreach (double number in grades)//numbers
+            var result = new Statistics();
+            result.Average = 0.0;
+            result.High = double.MinValue;
+            result.Low = double.MaxValue;
+            foreach (double grade in grades)//numbers
             {
-                highGrade = Math.Max(highGrade, number);
-                lowGrade = Math.Min(lowGrade, number);
+                result.High = Math.Max(result.High, grade);
+                result.Low = Math.Min(result.Low, grade);
 
                 //if (number > highGrade)
                 //{
@@ -33,14 +34,10 @@
                 //{
                 //    lowGrade = number;
                 //}
-                result += number;
+                result.Average += grade;
             }
-            var average = result / grades.Count;
-
-            Console.WriteLine($"The sum is: {result}");
-            Console.WriteLine($"The average is: {average:N1}");
-            Console.WriteLine($"The highest grade is: {highGrade:N1}");
-            Console.WriteLine($"The lowest grade is: {lowGrade:N1}");
+            result.Average /= grades.Count;
+            return result;
         }
 
 		// A field accessible throughout the methods in the class

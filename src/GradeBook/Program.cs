@@ -9,7 +9,13 @@ namespace GradeBook
         {
             var book = new Book("Ruth's Grade Book");
             book.AddGrade(89.1);
-            book.ShowStatistics();
+            
+            var stats = book.GetStatistics();
+
+            Console.WriteLine($"The sum is: {stats.Average}");
+            Console.WriteLine($"The average is: {stats.Average:N1}");
+            Console.WriteLine($"The highest grade is: {stats.High:N1}");
+            Console.WriteLine($"The lowest grade is: {stats.Low:N1}");
         }
      }
 }
