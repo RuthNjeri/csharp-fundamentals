@@ -16,15 +16,17 @@ public class BookTests
          *      Put together all your test data and arrange the objects and values that you are going to use   
          */
         var book = new Book("");
-        book.AddGrade(89.1)
-        book.AddGrade(90.5)
-        book.AddGrade(77.3)
+        book.AddGrade(89.1);
+        book.AddGrade(90.5);
+        book.AddGrade(77.3);
 
         // 2. Act section - Invoke a method to perform a calculation or produce a result
-        book.ShowStatistics();
+        var result = book.GetStatistics();
 
         // 3. Assert section - Assert sth about the value that was computed
-        Assert.Equal(expected, actual);
+        Assert.Equal(85.6, result.Average, 1);
+        Assert.Equal(90.5, result.High, 1);
+        Assert.Equal(77.3, result.Low, 1);
 
     }
 }
