@@ -9,7 +9,7 @@ public class BookTests
        The test methods are identified by the [Fact] attribute.
        Attributes are also described as decorations that we hang on sth like a method
     */
-    public void Test1() // A method has to be a member of a type. Test1 is a member of Type: Class UnitTest1
+    public void BookCalculateAnAverageGrade() // A method has to be a member of a type. Test1 is a member of Type: Class UnitTest1
     {
         /* Typically most people break a test into 3 sections
          * 1. Arrange section

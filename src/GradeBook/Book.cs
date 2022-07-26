@@ -6,7 +6,7 @@
         {
             grades = new List<double>();
 			// this(object)
-            this.name = name; // TODO review the video on the this keyword
+            Name = name; // TODO review the video on the this keyword
         }
 
         // Instance member/ Instance method
@@ -43,7 +43,8 @@
 		// A field accessible throughout the methods in the class
 		// A field is declared in a class or struct. A data member of a class
 		private List<double> grades;
-		private readonly string name; // TODO investigate read only
+        // The convention is that if you have a public member, the public member always has an uppercase
+		public readonly string Name; // TODO investigate read only
 	}
 }
 
